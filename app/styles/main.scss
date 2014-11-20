@@ -1,0 +1,14 @@
+.gallery {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+#gallery-viewport {
+  height: 100%;
+  width: auto;
+  img {
+    display: inline-flex;
+    width: 205px;
+    height: 100%;
+  }
+}
