@@ -8,17 +8,18 @@ angular.module('angularMap')
       'Karma',
       'mapsContent'
     ];
+    
 
-    $document.ready(function () {
+    $document.ready(function ($) {
       //definitions	
       $scope.galleryViewport = $('#gallery-viewport');
       console.log( $scope.galleryViewport);
       var elWIdth = 205;
       var length = mapsContent.length;
-      $scope.width = length * elWIdth;
-      $scope.galleryViewport.css('width', $scope.width + 'px');
+      $scope.width = (length+1) * elWIdth;
       
-
+      
+     
       $scope.content = mapsContent;
       console.log($scope.content);
       

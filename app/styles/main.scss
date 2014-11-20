@@ -1,14 +1,50 @@
-.gallery {
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
+@import "compass/reset.scss";
+@import "compass/layout.scss";
+@import "compass/css3.scss";
+
+$footer-height: 120px;
+$one: 10px;
+@include sticky-footer($footer-height, "#layout", "#layout_footer", "#gallery");
+
+html {
+  @include box-sizing(border-box);
+  overflow-x: hidden;
+  background-color: black;
 }
-#gallery-viewport {
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.main {
+  height: 100%;
+  position: absolute;
+  max-width: 100%;
+}
+#gallery-active {
   height: 100%;
   width: auto;
+  margin-bottom: -$footer-height;
+  img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+#gallery {
+  height: $footer-height ;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: black;
+}
+#gallery-viewport {
+  padding: $one;
+  height: 100%;
+  width: 100%;
   img {
     display: inline-flex;
     width: 205px;
     height: 100%;
+    margin: 2px;
   }
 }
