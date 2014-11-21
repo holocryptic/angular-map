@@ -11,5 +11,7 @@
 angular
   .module('angularMap', [
     'ngAnimate',
-    'ngResource'
+    'ngResource',
+    'uiGmapgoogle-maps',
+    'geolocation'
   ]);

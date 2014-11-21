@@ -20,6 +20,12 @@ html {
   position: absolute;
   max-width: 100%;
 }
+
+.angular-google-map-container { 
+  width: 260px;
+  height: 150px;
+}
+
 #gallery-active {
   height: 100%;
   width: auto;
@@ -34,7 +40,7 @@ html {
 #gallery {
   height: $footer-height ;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: scroll;
   background-color: black;
 }
 #gallery-viewport {

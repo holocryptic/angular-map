@@ -1,4 +1,4 @@
-<div id="layout">
+<div id="layout" >
 	<div id="gallery-active">
 		<img src="{{item.url}}" ng-repeat= 'item in content' ng-if="isCurrentIndex($index)">
 	</div>
@@ -7,8 +7,18 @@
 	<div id="layout_footer"></div>
 </div>
 
+
+
+
 <div id="gallery">
+
 	<div id="gallery-viewport" ng-style="{width: {{width}} + 'px'}">
 		<img src="{{item.url}}" ng-repeat= 'item in content' ng-click="setIndex($index)">
 	</div>
+</div>
+
+<div>
+	<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+		<ui-gmap-marker ng-repeat="marker in content" events="marker.events" coords ="marker.Coordinates" idkey="marker.url"> </ui-gmap-marker>
+	</ui-gmap-google-map>
 </div>
