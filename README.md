@@ -1,16 +1,20 @@
 angular-map
 ===========
 
-Gallery and map using angular 
+####Gallery and map using angular 
 
 
 
-Getting started:
+#####Getting started:
 
-npm install
-bower install
-grunt serve
+*npm install
+
+*bower install
+
+*grunt serve
 
 
-To build app:
-grunt build
+
+#####To build app:
+
+*grunt build
