@@ -11,14 +11,17 @@
 
 
 <div id="gallery">
-
-	<div id="gallery-viewport" ng-style="{width: {{width}} + 'px'}">
-		<img src="{{item.url}}" ng-repeat= 'item in content' ng-click="setIndex($index)">
+	<div id="map-wrapper" class="black-bg">
+		<ui-gmap-google-map center="map.center" zoom='map.zoom' >
+			<ui-gmap-marker ng-repeat="marker in content" coords ="marker.Coordinates" idkey="marker.url"> 
+				<ui-gmap-window IsIconVisibleOnClick="true"> {{marker.description}}</ui-gmap-window>
+			</ui-gmap-marker>
+		</ui-gmap-google-map>
+	</div>
+	<div id="gallery-viewport" class="black-bg">
+		<div id="thumbnails" ng-style="{width: {{width}} + 'px'}">
+			<img src="{{item.url}}" ng-repeat= 'item in content' ng-click="setIndex($index)">
+		</div>
 	</div>
 </div>
 
-<div>
-	<ui-gmap-google-map center='map.center' zoom='map.zoom'>
-		<ui-gmap-marker ng-repeat="marker in content" events="marker.events" coords ="marker.Coordinates" idkey="marker.url"> </ui-gmap-marker>
-	</ui-gmap-google-map>
-</div>

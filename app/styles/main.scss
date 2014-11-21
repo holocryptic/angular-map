@@ -4,7 +4,7 @@
 
 $footer-height: 120px;
 $one: 10px;
-@include sticky-footer($footer-height, "#layout", "#layout_footer", "#gallery");
+@include sticky-footer(165px, "#layout", "#layout_footer", "#gallery");
 
 html {
   @include box-sizing(border-box);
@@ -15,21 +15,29 @@ html {
   box-sizing: inherit;
 }
 
+.black-bg {
+  background-color: black;
+}
 .main {
   height: 100%;
   position: absolute;
   max-width: 100%;
 }
+#map-wrapper {
+  display: inline-block;
+  float:left;
+}
 
 .angular-google-map-container { 
   width: 260px;
-  height: 150px;
+  height: 135px;
+  margin: 15px
 }
 
 #gallery-active {
   height: 100%;
   width: auto;
-  margin-bottom: -$footer-height;
+  margin-bottom: -165px;
   img {
     height: 100%;
     width: auto;
@@ -39,11 +47,14 @@ html {
 }
 #gallery {
   height: $footer-height ;
-  width: 100%;
-  overflow-x: scroll;
-  background-color: black;
 }
+
 #gallery-viewport {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+#thumbnails {
   padding: $one;
   height: 100%;
   width: 100%;
